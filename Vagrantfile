@@ -25,6 +25,6 @@ Vagrant.configure('2') do |config|
       inline: "mv /tmp/#{basepath} /var/www/html/preseed/#{basepath}; chown root: /var/www/html/preseed/#{basepath}"
     )
   end
-
+  # Change the SELinux file type to avoid permission denied errors
   config.vm.provision 'shell', inline: 'chcon -t httpd_sys_content_t /var/www/html/preseed/*', privileged: true
 end
