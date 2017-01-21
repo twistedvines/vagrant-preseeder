@@ -1,0 +1,3 @@
+[submodule "files/preseeds"]
+	path = files/preseeds
+	url = git@github.com:twistedvines/preseeds.git
